@@ -23,7 +23,10 @@ export class GameService {
       .ref(`/matchWinners/`);
     const matchPrizeWinners: firebase.database.Reference = firebase
       .database()
-      .ref(`/matchPrizeWinners/`);
+      .ref(`/Matches/${matchRes.date}`);
+    const userDetails:firebase.database.Reference = firebase
+    .database()
+    .ref(`/Matches/${matchRes.date}`);
 
     matchResult
       .child(matchRes.matchId)
@@ -65,10 +68,31 @@ export class GameService {
                 }
 
                 var prizewinners = [result[random[0]], result[random[1]]];
-                console.log('prize', prizewinners);
-                matchPrizeWinners.child(matchRes.matchId).update(prizewinners);
+                for (let index = 1; index <= prizewinners.length; index++) {
+                  var userName = 'user' + index;
+                  var user1 = { [userName]: prizewinners[index - 1].name };
+                  matchPrizeWinners.child(`${matchRes.matchId}`).update(user1);
+                }
+                matchPrizeWinners
+                  .child(`${matchRes.matchId}`)
+                  .update({ team1Goal: matchRes.team1Goal });
+                matchPrizeWinners
+                  .child(`${matchRes.matchId}`)
+                  .update({ team2Goal: matchRes.team2Goal });
               } else {
-                matchPrizeWinners.child(matchRes.matchId).update(result);
+                for (let index = 1; index <= result.length; index++) {
+                  var userName = 'user' + index;
+                  var user1 = { [userName]: result[index - 1].name };
+                  matchPrizeWinners.child(`${matchRes.matchId}`).update(user1);
+                }
+
+                //for updating the actual match goal 
+                matchPrizeWinners
+                  .child(`${matchRes.matchId}`)
+                  .update({ team1Goal: matchRes.team1Goal });
+                matchPrizeWinners
+                  .child(`${matchRes.matchId}`)
+                  .update({ team2Goal: matchRes.team2Goal });
               }
             });
         });
