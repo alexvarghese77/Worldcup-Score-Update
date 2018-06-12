@@ -13,7 +13,7 @@ export class GameService {
   updateScore(matchRes) {
     const matchResult: firebase.database.Reference = firebase
       .database()
-      .ref(`/matchResult/${matchRes.matchId}/`);
+      .ref(`/matchResult/`);
 
     const prediction: firebase.database.Reference = firebase
       .database()
@@ -24,9 +24,9 @@ export class GameService {
     const matchPrizeWinners: firebase.database.Reference = firebase
       .database()
       .ref(`/Matches/${matchRes.date}`);
-    const userDetails:firebase.database.Reference = firebase
-    .database()
-    .ref(`/Matches/${matchRes.date}`);
+    const userDetails: firebase.database.Reference = firebase
+      .database()
+      .ref(`/Matches/${matchRes.date}`);
 
     matchResult
       .child(matchRes.matchId)
@@ -70,7 +70,10 @@ export class GameService {
                 var prizewinners = [result[random[0]], result[random[1]]];
                 for (let index = 1; index <= prizewinners.length; index++) {
                   var userName = 'user' + index;
-                  var user1 = { [userName]: prizewinners[index - 1].name };
+                  var userNameOrEmail = result[index - 1].name
+                    ? result[index - 1].name
+                    : result[index - 1].user;
+                  var user1 = { [userName]: userNameOrEmail };
                   matchPrizeWinners.child(`${matchRes.matchId}`).update(user1);
                 }
                 matchPrizeWinners
@@ -82,11 +85,14 @@ export class GameService {
               } else {
                 for (let index = 1; index <= result.length; index++) {
                   var userName = 'user' + index;
-                  var user1 = { [userName]: result[index - 1].name };
+                  var userNameOrEmail = result[index - 1].name
+                    ? result[index - 1].name
+                    : result[index - 1].user;
+                  var user1 = { [userName]: userNameOrEmail };
                   matchPrizeWinners.child(`${matchRes.matchId}`).update(user1);
                 }
 
-                //for updating the actual match goal 
+                //for updating the actual match goal
                 matchPrizeWinners
                   .child(`${matchRes.matchId}`)
                   .update({ team1Goal: matchRes.team1Goal });
@@ -94,8 +100,56 @@ export class GameService {
                   .child(`${matchRes.matchId}`)
                   .update({ team2Goal: matchRes.team2Goal });
               }
+              this.pointUpdate(result, matchRes);
             });
         });
       });
   }
+
+  pointUpdate(result, matchRes) {
+    debugger;
+    var userPointUpdateRef: firebase.database.Reference = firebase
+      .database()
+      .ref(`/user/`);
+    for (let i = 0; i < result.length; i++) {
+      var userProfileRef: firebase.database.Reference = firebase
+        .database()
+        .ref(`/user/${result[i].user}`);
+      userProfileRef.once('value', personSnapshot => {
+        console.log('value updated in promis', personSnapshot.val());
+        var userProfile = personSnapshot.val();
+        // this.UpdateIndividualPoint(userProfile, result[i].user)
+        var point = {
+          point: userProfile.point + 10
+        };
+        userPointUpdateRef
+          .child(result[i].user)
+          .update(point)
+          .then(() => console.log('done'));
+      });
+    }
+  }
+  // UpdateIndividualPoint(userProfile, userEmail) {
+  //   debugger;
+  //   var userProfileRef: firebase.database.Reference = firebase
+  //     .database()
+  //     .ref(`/user/`);
+  //   var point = {
+  //     point: userProfile.point + 10
+  //   };
+  //   userProfileRef
+  //     .child(userEmail)
+  //     .update(point)
+  //     .then(() => console.log('done'));
+  // }
+
+  // UpdateIndividualNewPoint(userProfile, userEmail) {
+  //   var userProfileRef: firebase.database.Reference = firebase
+  //     .database()
+  //     .ref(`/user/`);
+  //   var point = {
+  //     point: 10
+  //   };
+  //   userProfileRef.child(userEmail).update(point);
+  // }
 }
