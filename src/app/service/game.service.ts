@@ -100,14 +100,13 @@ export class GameService {
                   .child(`${matchRes.matchId}`)
                   .update({ team2Goal: matchRes.team2Goal });
               }
-              this.pointUpdate(result, matchRes);
+             // this.pointUpdate(result, matchRes);
             });
         });
       });
   }
 
   pointUpdate(result, matchRes) {
-    debugger;
     var userPointUpdateRef: firebase.database.Reference = firebase
       .database()
       .ref(`/user/`);
@@ -129,27 +128,4 @@ export class GameService {
       });
     }
   }
-  // UpdateIndividualPoint(userProfile, userEmail) {
-  //   debugger;
-  //   var userProfileRef: firebase.database.Reference = firebase
-  //     .database()
-  //     .ref(`/user/`);
-  //   var point = {
-  //     point: userProfile.point + 10
-  //   };
-  //   userProfileRef
-  //     .child(userEmail)
-  //     .update(point)
-  //     .then(() => console.log('done'));
-  // }
-
-  // UpdateIndividualNewPoint(userProfile, userEmail) {
-  //   var userProfileRef: firebase.database.Reference = firebase
-  //     .database()
-  //     .ref(`/user/`);
-  //   var point = {
-  //     point: 10
-  //   };
-  //   userProfileRef.child(userEmail).update(point);
-  // }
 }
