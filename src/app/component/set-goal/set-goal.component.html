@@ -1,10 +1,9 @@
-
 <form [formGroup]="matchScoreForm" (ngSubmit)="updateGoal()">
   <div>
     <input type="date" name="date" (change)="dateChange($event.target.value)" formControlName="date">
   </div>
   <div>
-    <select name="" id="" (change)="fetchMatchDetails($event.target.value)" formControlName="matchId">
+    <select name="" id="" formControlName="matchId">
       <option>select val</option>
       <option *ngFor="let match of data" value={{match.matchId}}>{{match.team1Code}} vs {{match.team2Code}}</option>
     </select>
