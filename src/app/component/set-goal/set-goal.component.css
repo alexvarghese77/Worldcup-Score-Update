@@ -1,0 +1,13 @@
+form {
+  text-align: center;
+  border: 1px solid black;
+}
+
+input,
+select {
+  width: 30%;
+  border-radius: 10px;
+  border-color: i1px solid green;
+  margin: 10px;
+  height: 20%;
+}

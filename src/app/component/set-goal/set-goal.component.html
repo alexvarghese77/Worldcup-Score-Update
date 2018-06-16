@@ -1,0 +1,28 @@
+
+<form [formGroup]="matchScoreForm" (ngSubmit)="updateGoal()">
+  <div>
+    <input type="date" name="date" (change)="dateChange($event.target.value)" formControlName="date">
+  </div>
+  <div>
+    <select name="" id="" (change)="fetchMatchDetails($event.target.value)" formControlName="matchId">
+      <option>select val</option>
+      <option *ngFor="let match of data" value={{match.matchId}}>{{match.team1Code}} vs {{match.team2Code}}</option>
+    </select>
+  </div>
+  <div>
+    <input type="text" name="team1Goal" formControlName="team1Goal">
+  </div>
+  <div>
+    <input type="text" name="dteam2Goalate" formControlName="team2Goal">
+  </div>
+  <div>
+    <button type="submit">save</button>
+  </div>
+</form>
+<!-- <form>
+  <div class="row">
+    <div class="col-xs-6 col-6 col-md-4 form-group">
+      <input type="text" placeholder="Datepicker" class="form-control" bsDatepicker (input)="dateChange($event.target.value)">
+    </div>
+  </div>
+</form> -->

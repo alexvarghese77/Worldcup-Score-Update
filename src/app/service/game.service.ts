@@ -27,7 +27,6 @@ export class GameService {
     const userDetails: firebase.database.Reference = firebase
       .database()
       .ref(`/Matches/${matchRes.date}`);
-
     matchResult
       .child(matchRes.matchId)
       .update(matchRes)
@@ -53,54 +52,28 @@ export class GameService {
             .child(matchRes.matchId)
             .update(result)
             .then(update => {
-              console.log('match');
-              if (result.length > 2) {
-                var a = Math.floor(Math.random() * result.length) + 1;
-                var b = Math.floor(Math.random() * result.length) + 1;
-                console.log('a', a, 'b', b);
+              matchPrizeWinners
+                .child(`${matchRes.matchId}`)
+                .update({ team1Goal: matchRes.team1Goal });
 
-                var random = [];
-                for (var i = 0; i < result.length; i++) {
-                  var temp = Math.floor(Math.random() * result.length);
-                  if (random.indexOf(temp) == -1) {
-                    random.push(temp);
-                  } else i--;
-                }
+              matchPrizeWinners
+                .child(`${matchRes.matchId}`)
+                .update({ team2Goal: matchRes.team2Goal });
 
-                var prizewinners = [result[random[0]], result[random[1]]];
-                for (let index = 1; index <= prizewinners.length; index++) {
-                  var userName = 'user' + index;
-                  var userNameOrEmail = result[index - 1].name
-                    ? result[index - 1].name
-                    : result[index - 1].user;
-                  var user1 = { [userName]: userNameOrEmail };
-                  matchPrizeWinners.child(`${matchRes.matchId}`).update(user1);
-                }
-                matchPrizeWinners
-                  .child(`${matchRes.matchId}`)
-                  .update({ team1Goal: matchRes.team1Goal });
-                matchPrizeWinners
-                  .child(`${matchRes.matchId}`)
-                  .update({ team2Goal: matchRes.team2Goal });
-              } else {
-                for (let index = 1; index <= result.length; index++) {
-                  var userName = 'user' + index;
-                  var userNameOrEmail = result[index - 1].name
-                    ? result[index - 1].name
-                    : result[index - 1].user;
-                  var user1 = { [userName]: userNameOrEmail };
-                  matchPrizeWinners.child(`${matchRes.matchId}`).update(user1);
-                }
+              if (result.length > 0) {
+                var winner1 = Math.floor(Math.random() * result.length) + 1;
 
-                //for updating the actual match goal
+                var userNameOrEmail = result[winner1].name
+                  ? result[winner1].name
+                  : result[winner1].user;
+                var matchwinner = { user1: userNameOrEmail };
                 matchPrizeWinners
                   .child(`${matchRes.matchId}`)
-                  .update({ team1Goal: matchRes.team1Goal });
-                matchPrizeWinners
-                  .child(`${matchRes.matchId}`)
-                  .update({ team2Goal: matchRes.team2Goal });
+                  .update(matchwinner)
+                  .then(res => {
+                    this.pointUpdate(result, matchRes);
+                  });
               }
-             // this.pointUpdate(result, matchRes);
             });
         });
       });
@@ -117,10 +90,16 @@ export class GameService {
       userProfileRef.once('value', personSnapshot => {
         console.log('value updated in promis', personSnapshot.val());
         var userProfile = personSnapshot.val();
-        // this.UpdateIndividualPoint(userProfile, result[i].user)
-        var point = {
-          point: userProfile.point + 10
-        };
+        let point: any;
+        if (userProfile.point) {
+          point = {
+            point: userProfile.point + 10
+          };
+        } else {
+          point = {
+            point: 10
+          };
+        }
         userPointUpdateRef
           .child(result[i].user)
           .update(point)

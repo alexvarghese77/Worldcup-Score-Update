@@ -8,12 +8,13 @@ import { GameService } from './service/game.service';
 export class AppComponent {
   constructor(private gameService: GameService) {}
   matchRes = {
-    matchId: 301,
-    team1Goal: 1,
-    team2Goal: 1,
-    date: '12-06-2018'
+    matchId: 4,
+    team1Goal: 3,
+    team2Goal: 3,
+    date: '15-06-2018'
   };
   updateScore() {
     this.gameService.updateScore(this.matchRes);
   }
+  
 }

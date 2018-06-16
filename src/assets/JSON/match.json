@@ -1,0 +1,468 @@
+{
+  "Matches": {
+    "14-06-2018": [
+      {
+        "date": "14-06-2018",
+        "matchId": 1,
+        "team1": 1,
+        "team1Code": "RUS",
+        "team1Goal": 5,
+        "team2": 2,
+        "team2Code": "KSA",
+        "team2Goal": 0,
+        "time": "20:30",
+        "user1": "Dileesh"
+      }
+    ],
+    "15-06-2018": [
+      {
+        "date": "15-06-2018",
+        "matchId": 2,
+        "team1": 3,
+        "team1Code": "EGY",
+        "team2": 4,
+        "team2Code": "URU",
+        "time": "17:30"
+      },
+      {
+        "date": "15-06-2018",
+        "matchId": 3,
+        "team1": 7,
+        "team1Code": "MAR",
+        "team2": 8,
+        "team2Code": "IRN",
+        "time": "20:30"
+      },
+      {
+        "date": "15-06-2018",
+        "matchId": 4,
+        "team1": 5,
+        "team1Code": "POR",
+        "team2": 6,
+        "team2Code": "ESP",
+        "time": "23:30"
+      }
+    ],
+    "16-06-2018": 
+       [{
+        "date": "16-06-2018",
+        "matchId": 5,
+        "team1": 9,
+        "team1Code": "FRA",
+        "team2": 10,
+        "team2Code": "AUS",
+        "time": "15:30"
+      },
+      {
+        "date": "16-06-2018",
+        "matchId": 6,
+        "team1": 13,
+        "team1Code": "ARG",
+        "team2": 14,
+        "team2Code": "ISL",
+        "time": "21:30"
+      },
+       {
+        "date": "16-06-2018",
+        "matchId": 7,
+        "team1": 11,
+        "team1Code": "PER",
+        "team2": 12,
+        "team2Code": "DEN",
+        "time": "18:30"
+      }],
+    "17-06-2018": [
+      {
+        "date": "17-06-2018",
+        "matchId": 8,
+        "team1": 15,
+        "team1Code": "CRO",
+        "team2": 16,
+        "team2Code": "NGA",
+        "time": "00:30"
+      },
+       {
+        "date": "17-06-2018",
+        "matchId": 9,
+        "team1": 19,
+        "team1Code": "CRC",
+        "team2": 20,
+        "team2Code": "SRB",
+        "time": "17:30"
+      },
+       {
+        "date": "17-06-2018",
+        "matchId": 10,
+        "team1": 21,
+        "team1Code": "GER",
+        "team2": 22,
+        "team2Code": "MEX",
+        "time": "20:30"
+      },
+       {
+        "date": "17-06-2018",
+        "matchId": 11,
+        "team1": 17,
+        "team1Code": "BRA",
+        "team2": 18,
+        "team2Code": "SUI",
+        "time": "23:30"
+      }
+    ],
+    "18-06-2018": [
+      {
+        "date": "18-06-2018",
+        "matchId": 12,
+        "team1": 23,
+        "team1Code": "SWE",
+        "team2": 24,
+        "team2Code": "KOR",
+        "time": "17:30"
+      },
+       {
+        "date": "18-06-2018",
+        "matchId": 13,
+        "team1": 25,
+        "team1Code": "BEL",
+        "team2": 26,
+        "team2Code": "PAN",
+        "time": "20:30"
+      },
+      {
+        "date": "18-06-2018",
+        "matchId": 14,
+        "team1": 27,
+        "team1Code": "TUN",
+        "team2": 28,
+        "team2Code": "ENG",
+        "time": "23:30"
+      }
+    ],
+    "19-06-2018": [
+      {
+        "date": "19-06-2018",
+        "matchId": 15,
+        "team1": 31,
+        "team1Code": "COL",
+        "team2": 32,
+        "team2Code": "JPN",
+        "time": "17:30"
+      },
+      {
+        "date": "19-06-2018",
+        "matchId": 16,
+        "team1": 29,
+        "team1Code": "POL",
+        "team2": 30,
+        "team2Code": "SEN",
+        "time": "20:30"
+      },
+       {
+        "date": "19-06-2018",
+        "matchId": 17,
+        "team1": 1,
+        "team1Code": "RUS",
+        "team2": 3,
+        "team2Code": "EGY",
+        "time": "23:30"
+      }
+    ],
+    "20-06-2018": [
+       {
+        "date": "20-06-2018",
+        "matchId": 18,
+        "team1": 5,
+        "team1Code": "POR",
+        "team2": 7,
+        "team2Code": "MAR",
+        "time": "17:30"
+      },
+      {
+        "date": "20-06-2018",
+        "matchId": 19,
+        "team1": 4,
+        "team1Code": "URU",
+        "team2": 2,
+        "team2Code": "KSA",
+        "time": "20:30"
+      },
+      {
+        "date": "20-06-2018",
+        "matchId": 20,
+        "team1": 8,
+        "team1Code": "IRN",
+        "team2": 6,
+        "team2Code": "ESP",
+        "time": "23:30"
+      }
+    ],
+    "21-06-2018": [
+       {
+        "date": "21-06-2018",
+        "matchId": 21,
+        "team1": 12,
+        "team1Code": "DEN",
+        "team2": 10,
+        "team2Code": "AUS",
+        "time": "17:30"
+      },
+      {
+        "date": "21-06-2018",
+        "matchId": 22,
+        "team1": 9,
+        "team1Code": "FRA",
+        "team2": 11,
+        "team2Code": "PER",
+        "time": "20:30"
+      },
+      {
+        "date": "21-06-2018",
+        "matchId": 23,
+        "team1": 13,
+        "team1Code": "ARG",
+        "team2": 15,
+        "team2Code": "CRO",
+        "time": "23:30"
+      }
+    ],
+    "22-06-2018": [
+      {
+        "date": "22-06-2018",
+        "matchId": 24,
+        "team1": 17,
+        "team1Code": "BRA",
+        "team2": 19,
+        "team2Code": "CRC",
+        "time": "17:30"
+      },
+      {
+        "date": "22-06-2018",
+        "matchId": 25,
+        "team1": 16,
+        "team1Code": "NGA",
+        "team2": 14,
+        "team2Code": "ISL",
+        "time": "20:30"
+      },
+      {
+        "date": "22-06-2018",
+        "matchId": 26,
+        "team1": 20,
+        "team1Code": "SRB",
+        "team2": 18,
+        "team2Code": "SUI",
+        "time": "23:30"
+      }
+    ],
+    "23-06-2018": [
+       {
+        "date": "23-06-2018",
+        "matchId": 27,
+        "team1": 25,
+        "team1Code": "BEL",
+        "team2": 27,
+        "team2Code": "TUN",
+        "time": "17:30"
+      },
+       {
+        "date": "23-06-2018",
+        "matchId": 28,
+        "team1": 24,
+        "team1Code": "KOR",
+        "team2": 22,
+        "team2Code": "MEX",
+        "time": "20:30"
+      },
+       {
+        "date": "23-06-2018",
+        "matchId": 29,
+        "team1": 21,
+        "team1Code": "GER",
+        "team2": 23,
+        "team2Code": "SWE",
+        "time": "23:30"
+      }
+    ],
+    "24-06-2018": [
+      {
+        "date": "24-06-2018",
+        "matchId": 30,
+        "team1": 28,
+        "team1Code": "ENG",
+        "team2": 26,
+        "team2Code": "PAN",
+        "time": "17:30"
+      },
+      {
+        "date": "24-06-2018",
+        "matchId": 31,
+        "team1": 32,
+        "team1Code": "JPN",
+        "team2": 30,
+        "team2Code": "SEN",
+        "time": "20:30"
+      },
+       {
+        "date": "24-06-2018",
+        "matchId": 32,
+        "team1": 29,
+        "team1Code": "POL",
+        "team2": 31,
+        "team2Code": "COL",
+        "time": "23:30"
+      }
+    ],
+    "25-06-2018": [
+       {
+        "date": "25-06-2018",
+        "matchId": 33,
+        "team1": 4,
+        "team1Code": "URU",
+        "team2": 1,
+        "team2Code": "RUS",
+        "time": "19:30"
+      },
+     {
+        "date": "25-06-2018",
+        "matchId": 34,
+        "team1": 2,
+        "team1Code": "KSA",
+        "team2": 3,
+        "team2Code": "EGY",
+        "time": "19:30"
+      },
+       {
+        "date": "25-06-2018",
+        "matchId": 35,
+        "team1": 8,
+        "team1Code": "IRN",
+        "team2": 5,
+        "team2Code": "POR",
+        "time": "23:30"
+      },
+       {
+        "date": "25-06-2018",
+        "matchId": 36,
+        "team1": 6,
+        "team1Code": "ESP",
+        "team2": 7,
+        "team2Code": "MAR",
+        "time": "23:30"
+      }
+    ],
+    "26-06-2018": [
+       {
+        "date": "26-06-2018",
+        "matchId": 37,
+        "team1": 12,
+        "team1Code": "DEN",
+        "team2": 9,
+        "team2Code": "FRA",
+        "time": "19:30"
+      },
+       {
+        "date": "26-06-2018",
+        "matchId": 38,
+        "team1": 10,
+        "team1Code": "AUS",
+        "team2": 11,
+        "team2Code": "PER",
+        "time": "19:30"
+      },
+       {
+        "date": "26-06-2018",
+        "matchId": 39,
+        "team1": 16,
+        "team1Code": "NGA",
+        "team2": 13,
+        "team2Code": "ARG",
+        "time": "23:30"
+      },
+      {
+        "date": "26-06-2018",
+        "matchId": 40,
+        "team1": 14,
+        "team1Code": "ISL",
+        "team2": 15,
+        "team2Code": "CRO",
+        "time": "23:30"
+      }
+    ],
+    "27-06-2018": [
+       {
+        "date": "27-06-2018",
+        "matchId": 41,
+        "team1": 22,
+        "team1Code": "MEX",
+        "team2": 23,
+        "team2Code": "SWE",
+        "time": "17:30"
+      },
+       {
+        "date": "27-06-2018",
+        "matchId": 42,
+        "team1": 24,
+        "team1Code": "KOR",
+        "team2": 21,
+        "team2Code": "GER",
+        "time": "19:30"
+      },
+      {
+        "date": "27-06-2018",
+        "matchId": 43,
+        "team1": 20,
+        "team1Code": "SRB",
+        "team2": 17,
+        "team2Code": "BRA",
+        "time": "23:30"
+      },
+      {
+        "date": "27-06-2018",
+        "matchId": 44,
+        "team1": 18,
+        "team1Code": "SUI",
+        "team2": 19,
+        "team2Code": "CRC",
+        "time": "23:30"
+      }
+    ],
+    "28-06-2018": [
+       {
+        "date": "28-06-2018",
+        "matchId": 45,
+        "team1": 32,
+        "team1Code": "JPN",
+        "team2": 29,
+        "team2Code": "POL",
+        "time": "19:30"
+      },
+       {
+        "date": "28-06-2018",
+        "matchId": 46,
+        "team1": 30,
+        "team1Code": "SEN",
+        "team2": 31,
+        "team2Code": "COL",
+        "time": "19:30"
+      },
+      {
+        "date": "28-06-2018",
+        "matchId": 47,
+        "team1": 26,
+        "team1Code": "PAN",
+        "team2": 27,
+        "team2Code": "TUN",
+        "time": "22:30"
+      },
+       {
+        "date": "28-06-2018",
+        "matchId": 48,
+        "team1": 28,
+        "team1Code": "ENG",
+        "team2": 25,
+        "team2Code": "BEL",
+        "time": "23:30"
+      }
+    ]
+  }
+}
