@@ -4,7 +4,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ReactiveFormsModule } from '@angular/forms'; 
 
 import { AppComponent } from './app.component';
@@ -29,7 +28,6 @@ import { ResultComponent } from './component/result/result.component';
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
-    BsDatepickerModule.forRoot(),
     ReactiveFormsModule
   ],
   providers: [GameService],
