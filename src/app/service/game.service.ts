@@ -31,7 +31,7 @@ export class GameService {
       .child(matchRes.matchId)
       .update(matchRes)
       .then(() => {
-        var predictionval = prediction.on('value', personSnapshot => {
+        var predictionval = prediction.once('value', personSnapshot => {
           console.log('value updated in promis', personSnapshot.val());
           var userprediction = personSnapshot.val();
           let result = [];

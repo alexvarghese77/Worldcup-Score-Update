@@ -463,6 +463,94 @@
         "team2Code": "BEL",
         "time": "23:30"
       }
+    ],
+    "30-06-2018" : [
+     {
+        "date" : "30-06-2018",
+        "flag" : false,
+        "matchId" : 49,
+        "team1" : 9,
+        "team1Code" : "FRA",
+        "team2" : 13,
+        "team2Code" : "ARG",
+        "time" : "19:30"
+      },
+      {
+        "date" : "30-06-2018",
+        "flag" : false,
+        "matchId" : 50,
+        "team1" : 4,
+        "team1Code" : "URU",
+        "team2" : 5,
+        "team2Code" : "POR",
+        "time" : "23:30"
+      }
+    ],
+    "01-07-2018" : [
+      {
+        "date" : "01-07-2018",
+        "flag" : false,
+        "matchId" : 51,
+        "team1" : 6,
+        "team1Code" : "ESP",
+        "team2" : 1,
+        "team2Code" : "RUS",
+        "time" : "19:30"
+      },
+       {
+        "date" : "01-07-2018",
+        "flag" : false,
+        "matchId" : 52,
+        "team1" : 15,
+        "team1Code" : "CRO",
+        "team2" : 12,
+        "team2Code" : "DEN",
+        "time" : "23:30"
+      }
+    ],
+    "02-07-2018" : [
+       {
+        "date" : "02-07-2018",
+        "flag" : false,
+        "matchId" : 53,
+        "team1" : 17,
+        "team1Code" : "BRA",
+        "team2" : 22,
+        "team2Code" : "MEX",
+        "time" : "19:30"
+      },
+       {
+        "date" : "02-07-2018",
+        "flag" : false,
+        "matchId" : 54,
+        "team1" : 25,
+        "team1Code" : "BEL",
+        "team2" : 32,
+        "team2Code" : "JPN",
+        "time" : "23:30"
+      }
+    ],
+    "03-07-2018" : [
+      {
+        "date" : "03-07-2018",
+        "flag" : false,
+        "matchId" : 55,
+        "team1" : 23,
+        "team1Code" : "SWE",
+        "team2" : 18,
+        "team2Code" : "SUI",
+        "time" : "19:30"
+      },
+      {
+        "date" : "03-07-2018",
+        "flag" : false,
+        "matchId" : 56,
+        "team1" : 31,
+        "team1Code" : "COL",
+        "team2" : 28,
+        "team2Code" : "ENG",
+        "time" : "23:30"
+      }
     ]
   }
 }
