@@ -551,6 +551,28 @@
         "team2Code" : "ENG",
         "time" : "23:30"
       }
+    ],
+    "07-07-2018" : [
+      {
+        "date" : "07-07-2018",
+    "flag" : false,
+    "matchId" : 62,
+    "team1" : 23,
+    "team1Code" : "SWE",
+    "team2" : 28,
+    "team2Code" : "ENG",
+    "time" : "19:30"
+      },
+      {
+        "date" : "07-07-2018",
+    "flag" : false,
+    "matchId" : 63,
+    "team1" : 1,
+    "team1Code" : "RUS",
+    "team2" : 15,
+    "team2Code" : "CRO",
+    "time" : "23:30"
+      }
     ]
   }
 }
